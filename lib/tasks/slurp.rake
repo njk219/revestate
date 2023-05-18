@@ -3,7 +3,7 @@ namespace :slurp do
   task limitedsarasota: :environment do
     require "csv"
 
-    csv_text = File.read(Rails.root.join("lib", "csvs", "limitedsarasota.csv"))  
+    csv_text = File.read(Rails.root.join("lib", "csvs", "LimitedSarasota.csv"))  
     csv = CSV.parse(csv_text, :headers => true, :encoding => "ISO-8859-1")
     csv.each do |row|
       t = Limitedsarasotum.new
@@ -14,7 +14,6 @@ namespace :slurp do
       t.ownership = row["ownership"]
       t.municipality = row["municipality"]
       t.subdivision = row["subdivision"]
-      t.property_use = row["property_use"]
       t.zoning = row["zoning"]
       t.total_living_units = row["total_living_units"]
       t.buildings = row["buildings"]
@@ -27,7 +26,7 @@ namespace :slurp do
       t.values_years = row["values_years"]
       t.values_land = row["values_land"]
       t.values_building = row["values_building"]
-      t.values_extra_feature = row["values_extra_feature"]
+      t.values_extra_features = row["values_extra_feature"]
       t.values_just = row["values_just"]
       t.values_assessed = row["values_assessed"]
       t.values_exemptions = row["values_exemptions"]
