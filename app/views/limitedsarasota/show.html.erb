@@ -1,0 +1,536 @@
+<div>
+  <div>
+    <h1>
+      Limitedsarasotum #<%= @the_limitedsarasotum.id %> details
+    </h1>
+
+    <div>
+      <div>
+        <a href="/limitedsarasota">
+          Go back
+        </a>
+      </div>
+
+      <div>
+        <a href="/delete_limitedsarasotum/<%= @the_limitedsarasotum.id %>">
+          Delete limitedsarasotum
+        </a>
+      </div>
+    </div>
+
+    <dl>
+      <dt>
+        Address
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.address %>
+      </dd>
+
+      <dt>
+        Year built
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.year_built %>
+      </dd>
+
+      <dt>
+        Land area
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.land_area %>
+      </dd>
+
+      <dt>
+        Living area
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.living_area %>
+      </dd>
+
+      <dt>
+        Ownership
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.ownership %>
+      </dd>
+
+      <dt>
+        Municipality
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.municipality %>
+      </dd>
+
+      <dt>
+        Subdivision
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.subdivision %>
+      </dd>
+
+      <dt>
+        Zoning
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.zoning %>
+      </dd>
+
+      <dt>
+        Total living units
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.total_living_units %>
+      </dd>
+
+      <dt>
+        Buildings
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.buildings %>
+      </dd>
+
+      <dt>
+        Beds
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.beds %>
+      </dd>
+
+      <dt>
+        Baths
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.baths %>
+      </dd>
+
+      <dt>
+        Half baths
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.half_baths %>
+      </dd>
+
+      <dt>
+        Eff year built
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.eff_year_built %>
+      </dd>
+
+      <dt>
+        Gross area
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.gross_area %>
+      </dd>
+
+      <dt>
+        Stories
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.stories %>
+      </dd>
+
+      <dt>
+        Values years
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.values_years %>
+      </dd>
+
+      <dt>
+        Values land
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.values_land %>
+      </dd>
+
+      <dt>
+        Values building
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.values_building %>
+      </dd>
+
+      <dt>
+        Values extra features
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.values_extra_features %>
+      </dd>
+
+      <dt>
+        Values just
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.values_just %>
+      </dd>
+
+      <dt>
+        Values assessed
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.values_assessed %>
+      </dd>
+
+      <dt>
+        Values exemptions
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.values_exemptions %>
+      </dd>
+
+      <dt>
+        Values taxable
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.values_taxable %>
+      </dd>
+
+      <dt>
+        Values cap
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.values_cap %>
+      </dd>
+
+      <dt>
+        Transfer dates
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.transfer_dates %>
+      </dd>
+
+      <dt>
+        Recorded considerations
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.recorded_considerations %>
+      </dd>
+
+      <dt>
+        Instrument numbers
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.instrument_numbers %>
+      </dd>
+
+      <dt>
+        Qualification codes
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.qualification_codes %>
+      </dd>
+
+      <dt>
+        Sellers
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.sellers %>
+      </dd>
+
+      <dt>
+        Instrument types
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.instrument_types %>
+      </dd>
+
+      <dt>
+        Taxes
+      </dt>
+      <dd>
+        <%= @the_limitedsarasotum.taxes %>
+      </dd>
+
+      <dt>
+        Created at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_limitedsarasotum.created_at) %> ago
+      </dd>
+
+      <dt>
+        Updated at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_limitedsarasotum.updated_at) %> ago
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<hr>
+
+
+<div>
+  <div>
+    <h2>
+      Edit limitedsarasotum
+    </h2>
+
+    <form action="/modify_limitedsarasotum/<%= @the_limitedsarasotum.id %>"  method="post" >
+      <div>
+        <label for="address_box">
+          Address
+        </label>
+
+        <input type="text" id="address_box" name="query_address" value="<%= @the_limitedsarasotum.address %>">
+      </div>
+
+      <div>
+        <label for="year_built_box">
+          Year built
+        </label>
+
+        <input type="date" id="year_built_box" name="query_year_built" value="<%= @the_limitedsarasotum.year_built %>">
+      </div>
+
+      <div>
+        <label for="land_area_box">
+          Land area
+        </label>
+
+        <input type="text" id="land_area_box" name="query_land_area" value="<%= @the_limitedsarasotum.land_area %>">
+      </div>
+
+      <div>
+        <label for="living_area_box">
+          Living area
+        </label>
+
+        <input type="text" id="living_area_box" name="query_living_area" value="<%= @the_limitedsarasotum.living_area %>">
+      </div>
+
+      <div>
+        <label for="ownership_box">
+          Ownership
+        </label>
+
+        <input type="text" id="ownership_box" name="query_ownership" value="<%= @the_limitedsarasotum.ownership %>">
+      </div>
+
+      <div>
+        <label for="municipality_box">
+          Municipality
+        </label>
+
+        <input type="text" id="municipality_box" name="query_municipality" value="<%= @the_limitedsarasotum.municipality %>">
+      </div>
+
+      <div>
+        <label for="subdivision_box">
+          Subdivision
+        </label>
+
+        <input type="text" id="subdivision_box" name="query_subdivision" value="<%= @the_limitedsarasotum.subdivision %>">
+      </div>
+
+      <div>
+        <label for="zoning_box">
+          Zoning
+        </label>
+
+        <input type="text" id="zoning_box" name="query_zoning" value="<%= @the_limitedsarasotum.zoning %>">
+      </div>
+
+      <div>
+        <label for="total_living_units_box">
+          Total living units
+        </label>
+
+        <input type="text" id="total_living_units_box" name="query_total_living_units" value="<%= @the_limitedsarasotum.total_living_units %>">
+      </div>
+
+      <div>
+        <label for="buildings_box">
+          Buildings
+        </label>
+
+        <input type="text" id="buildings_box" name="query_buildings" value="<%= @the_limitedsarasotum.buildings %>">
+      </div>
+
+      <div>
+        <label for="beds_box">
+          Beds
+        </label>
+
+        <input type="text" id="beds_box" name="query_beds" value="<%= @the_limitedsarasotum.beds %>">
+      </div>
+
+      <div>
+        <label for="baths_box">
+          Baths
+        </label>
+
+        <input type="text" id="baths_box" name="query_baths" value="<%= @the_limitedsarasotum.baths %>">
+      </div>
+
+      <div>
+        <label for="half_baths_box">
+          Half baths
+        </label>
+
+        <input type="text" id="half_baths_box" name="query_half_baths" value="<%= @the_limitedsarasotum.half_baths %>">
+      </div>
+
+      <div>
+        <label for="eff_year_built_box">
+          Eff year built
+        </label>
+
+        <input type="date" id="eff_year_built_box" name="query_eff_year_built" value="<%= @the_limitedsarasotum.eff_year_built %>">
+      </div>
+
+      <div>
+        <label for="gross_area_box">
+          Gross area
+        </label>
+
+        <input type="text" id="gross_area_box" name="query_gross_area" value="<%= @the_limitedsarasotum.gross_area %>">
+      </div>
+
+      <div>
+        <label for="stories_box">
+          Stories
+        </label>
+
+        <input type="text" id="stories_box" name="query_stories" value="<%= @the_limitedsarasotum.stories %>">
+      </div>
+
+      <div>
+        <label for="values_years_box">
+          Values years
+        </label>
+
+        <input type="text" id="values_years_box" name="query_values_years" value="<%= @the_limitedsarasotum.values_years %>">
+      </div>
+
+      <div>
+        <label for="values_land_box">
+          Values land
+        </label>
+
+        <input type="text" id="values_land_box" name="query_values_land" value="<%= @the_limitedsarasotum.values_land %>">
+      </div>
+
+      <div>
+        <label for="values_building_box">
+          Values building
+        </label>
+
+        <input type="text" id="values_building_box" name="query_values_building" value="<%= @the_limitedsarasotum.values_building %>">
+      </div>
+
+      <div>
+        <label for="values_extra_features_box">
+          Values extra features
+        </label>
+
+        <input type="text" id="values_extra_features_box" name="query_values_extra_features" value="<%= @the_limitedsarasotum.values_extra_features %>">
+      </div>
+
+      <div>
+        <label for="values_just_box">
+          Values just
+        </label>
+
+        <input type="text" id="values_just_box" name="query_values_just" value="<%= @the_limitedsarasotum.values_just %>">
+      </div>
+
+      <div>
+        <label for="values_assessed_box">
+          Values assessed
+        </label>
+
+        <input type="text" id="values_assessed_box" name="query_values_assessed" value="<%= @the_limitedsarasotum.values_assessed %>">
+      </div>
+
+      <div>
+        <label for="values_exemptions_box">
+          Values exemptions
+        </label>
+
+        <input type="text" id="values_exemptions_box" name="query_values_exemptions" value="<%= @the_limitedsarasotum.values_exemptions %>">
+      </div>
+
+      <div>
+        <label for="values_taxable_box">
+          Values taxable
+        </label>
+
+        <input type="text" id="values_taxable_box" name="query_values_taxable" value="<%= @the_limitedsarasotum.values_taxable %>">
+      </div>
+
+      <div>
+        <label for="values_cap_box">
+          Values cap
+        </label>
+
+        <input type="text" id="values_cap_box" name="query_values_cap" value="<%= @the_limitedsarasotum.values_cap %>">
+      </div>
+
+      <div>
+        <label for="transfer_dates_box">
+          Transfer dates
+        </label>
+
+        <input type="text" id="transfer_dates_box" name="query_transfer_dates" value="<%= @the_limitedsarasotum.transfer_dates %>">
+      </div>
+
+      <div>
+        <label for="recorded_considerations_box">
+          Recorded considerations
+        </label>
+
+        <input type="text" id="recorded_considerations_box" name="query_recorded_considerations" value="<%= @the_limitedsarasotum.recorded_considerations %>">
+      </div>
+
+      <div>
+        <label for="instrument_numbers_box">
+          Instrument numbers
+        </label>
+
+        <input type="text" id="instrument_numbers_box" name="query_instrument_numbers" value="<%= @the_limitedsarasotum.instrument_numbers %>">
+      </div>
+
+      <div>
+        <label for="qualification_codes_box">
+          Qualification codes
+        </label>
+
+        <input type="text" id="qualification_codes_box" name="query_qualification_codes" value="<%= @the_limitedsarasotum.qualification_codes %>">
+      </div>
+
+      <div>
+        <label for="sellers_box">
+          Sellers
+        </label>
+
+        <input type="text" id="sellers_box" name="query_sellers" value="<%= @the_limitedsarasotum.sellers %>">
+      </div>
+
+      <div>
+        <label for="instrument_types_box">
+          Instrument types
+        </label>
+
+        <input type="text" id="instrument_types_box" name="query_instrument_types" value="<%= @the_limitedsarasotum.instrument_types %>">
+      </div>
+
+      <div>
+        <label for="taxes_box">
+          Taxes
+        </label>
+
+        <input type="text" id="taxes_box" name="query_taxes" value="<%= @the_limitedsarasotum.taxes %>">
+      </div>
+
+      <button>
+        Update limitedsarasotum
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>
