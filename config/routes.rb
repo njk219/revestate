@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-
+#Home
+  get("/", { :controller => "limitedsarasota", :action => "index" })
 
   # Routes for the Bookmark resource:
 
@@ -51,7 +52,7 @@ Rails.application.routes.draw do
   # Routes for the Limitedsarasotum resource:
 
   # CREATE
-  post("/insert_limitedsarasotum", { :controller => "limitedsarasota", :action => "create" })
+  #post("/insert_limitedsarasotum", { :controller => "limitedsarasota", :action => "create" })
           
   # READ
   get("/limitedsarasota", { :controller => "limitedsarasota", :action => "index" })
@@ -60,10 +61,10 @@ Rails.application.routes.draw do
   
   # UPDATE
   
-  post("/modify_limitedsarasotum/:path_id", { :controller => "limitedsarasota", :action => "update" })
+  #post("/modify_limitedsarasotum/:path_id", { :controller => "limitedsarasota", :action => "update" })
   
   # DELETE
-  get("/delete_limitedsarasotum/:path_id", { :controller => "limitedsarasota", :action => "destroy" })
+  #get("/delete_limitedsarasotum/:path_id", { :controller => "limitedsarasota", :action => "destroy" })
 
   #------------------------------
 
