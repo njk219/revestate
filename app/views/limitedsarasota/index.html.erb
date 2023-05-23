@@ -1,8 +1,127 @@
 <div>
   <div>
     <h1>
-      List of all limitedsarasota
+      List of all Properties
     </h1>
+  </div>
+</div>
+
+<hr>
+<div>
+  <div>
+    <table border="1">
+      <tr>
+
+        <th>
+          Address
+        </th>
+
+        <th>
+          Land area
+        </th>
+
+        <th>
+          Living area
+        </th>
+
+        <th>
+          Beds
+        </th>
+
+        <th>
+          Baths
+        </th>
+
+        <th>
+          Half baths
+        </th>
+
+        <th>
+          Stories
+        </th>
+
+        <th>
+          Assessed Values
+        </th>
+
+        <th>
+          Year Assessed
+        </th>
+
+        <th>
+          Taxes
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @list_of_limitedsarasota.each do |a_limitedsarasotum| %>
+      <tr>
+
+        <td>
+          <%= a_limitedsarasotum.address %>
+        </td>
+
+        <td>
+          <%= a_limitedsarasotum.land_area %>
+        </td>
+
+        <td>
+          <%= a_limitedsarasotum.living_area %>
+        </td>
+
+        <td>
+          <%= a_limitedsarasotum.beds %>
+        </td>
+
+        <td>
+          <%= a_limitedsarasotum.baths %>
+        </td>
+
+        <td>
+          <%= a_limitedsarasotum.half_baths %>
+        </td>
+
+        <td>
+          <%= a_limitedsarasotum.stories %>
+        </td>
+
+        <td>
+          <%= a_limitedsarasotum.values_assessed %>
+        </td>
+
+        <td>
+          <%= a_limitedsarasotum.values_years %>
+        </td>
+
+        <td>
+          <%= a_limitedsarasotum.taxes %>
+        </td>
+
+        <td>
+          <%= time_ago_in_words(a_limitedsarasotum.created_at) %> ago
+        </td>
+        <td>
+          <%= time_ago_in_words(a_limitedsarasotum.updated_at) %> ago
+        </td>
+
+        <td>
+          <a href="/limitedsarasota/<%= a_limitedsarasotum.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
   </div>
 </div>
 
@@ -272,304 +391,9 @@
       </div>
 
       <button>
-        Create limitedsarasotum
+        Create Property Listing
       </button>
     </form>
-  </div>
-</div>
-
-<hr>
-<div>
-  <div>
-    <table border="1">
-      <tr>
-
-        <th>
-          Address
-        </th>
-
-        <th>
-          Year built
-        </th>
-
-        <th>
-          Land area
-        </th>
-
-        <th>
-          Living area
-        </th>
-
-        <th>
-          Ownership
-        </th>
-
-        <th>
-          Municipality
-        </th>
-
-        <th>
-          Subdivision
-        </th>
-
-        <th>
-          Zoning
-        </th>
-
-        <th>
-          Total living units
-        </th>
-
-        <th>
-          Buildings
-        </th>
-
-        <th>
-          Beds
-        </th>
-
-        <th>
-          Baths
-        </th>
-
-        <th>
-          Half baths
-        </th>
-
-        <th>
-          Eff year built
-        </th>
-
-        <th>
-          Gross area
-        </th>
-
-        <th>
-          Stories
-        </th>
-
-        <th>
-          Values years
-        </th>
-
-        <th>
-          Values land
-        </th>
-
-        <th>
-          Values building
-        </th>
-
-        <th>
-          Values extra features
-        </th>
-
-        <th>
-          Values just
-        </th>
-
-        <th>
-          Values assessed
-        </th>
-
-        <th>
-          Values exemptions
-        </th>
-
-        <th>
-          Values taxable
-        </th>
-
-        <th>
-          Values cap
-        </th>
-
-        <th>
-          Transfer dates
-        </th>
-
-        <th>
-          Recorded considerations
-        </th>
-
-        <th>
-          Instrument numbers
-        </th>
-
-        <th>
-          Qualification codes
-        </th>
-
-        <th>
-          Sellers
-        </th>
-
-        <th>
-          Instrument types
-        </th>
-
-        <th>
-          Taxes
-        </th>
-
-        <th>
-          Created at
-        </th>
-
-        <th>
-          Updated at
-        </th>
-
-        <th>
-        </th>
-      </tr>
-
-      <% @list_of_limitedsarasota.each do |a_limitedsarasotum| %>
-      <tr>
-
-        <td>
-          <%= a_limitedsarasotum.address %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.year_built %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.land_area %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.living_area %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.ownership %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.municipality %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.subdivision %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.zoning %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.total_living_units %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.buildings %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.beds %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.baths %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.half_baths %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.eff_year_built %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.gross_area %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.stories %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.values_years %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.values_land %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.values_building %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.values_extra_features %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.values_just %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.values_assessed %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.values_exemptions %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.values_taxable %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.values_cap %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.transfer_dates %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.recorded_considerations %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.instrument_numbers %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.qualification_codes %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.sellers %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.instrument_types %>
-        </td>
-
-        <td>
-          <%= a_limitedsarasotum.taxes %>
-        </td>
-
-        <td>
-          <%= time_ago_in_words(a_limitedsarasotum.created_at) %> ago
-        </td>
-        <td>
-          <%= time_ago_in_words(a_limitedsarasotum.updated_at) %> ago
-        </td>
-
-        <td>
-          <a href="/limitedsarasota/<%= a_limitedsarasotum.id %>">
-            Show details
-          </a>
-        </td>
-      </tr>
-      <% end %>
-    </table>
   </div>
 </div>
 
