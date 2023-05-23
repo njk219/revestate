@@ -1,4 +1,15 @@
 class LimitedsarasotaController < ApplicationController
+  def home
+
+
+    render({ :template => "limitedsarasota/home.html.erb" })
+  end
+  def edu
+
+
+    render({ :template => "limitedsarasota/edu.html.erb" })
+  end
+  
   def index
     matching_limitedsarasota = Limitedsarasotum.all
 

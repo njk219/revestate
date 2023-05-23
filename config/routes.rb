@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
 #Home
-  get("/", { :controller => "limitedsarasota", :action => "index" })
+  get("/", { :controller => "limitedsarasota", :action => "home" })
+  get("/edu", { :controller => "limitedsarasota", :action => "edu" })
 
   # Routes for the Bookmark resource:
 
