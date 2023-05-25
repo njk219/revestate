@@ -25,6 +25,8 @@ class LimitedsarasotaController < ApplicationController
 
     @the_limitedsarasotum = matching_limitedsarasota.at(0)
 
+
+
     render({ :template => "limitedsarasota/show.html.erb" })
   end
 

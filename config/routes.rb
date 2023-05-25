@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'home/chartview'
 #Home
   get("/", { :controller => "limitedsarasota", :action => "home" })
   get("/edu", { :controller => "limitedsarasota", :action => "edu" })

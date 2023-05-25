@@ -41,11 +41,11 @@
         </th>
 
         <th>
-          Assessed Values
+          Assessed Value
         </th>
 
         <th>
-          Year Assessed
+          Latest Year Assessed
         </th>
 
         <th>
@@ -96,15 +96,15 @@
         </td>
 
         <td>
-          <%= a_limitedsarasotum.values_assessed %>
+          $<%= eval(a_limitedsarasotum.values_assessed).at(0) %>
         </td>
 
         <td>
-          <%= a_limitedsarasotum.values_years %>
+          <%= eval(a_limitedsarasotum.values_years).at(0) %>
         </td>
 
         <td>
-          <%= a_limitedsarasotum.taxes %>
+          $<%= a_limitedsarasotum.taxes %>
         </td>
 
         <td>

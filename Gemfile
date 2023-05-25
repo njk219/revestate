@@ -54,3 +54,7 @@ end
 group :production do
   gem 'pg'
 end
+
+gem "chartkick", "~> 5.0"
+
+gem "highcharts-rails", "~> 6.0"
