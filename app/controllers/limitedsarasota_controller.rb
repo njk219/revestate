@@ -27,6 +27,13 @@ class LimitedsarasotaController < ApplicationController
     @the_limitedsarasotum = matching_limitedsarasota.at(0)
 
     @housing_values = eval(@the_limitedsarasotum.values_assessed)
+    @year_values = eval(@the_limitedsarasotum.values_years)
+    #Data needs to look like this: ({"2021-01-01" => 2, "2021-01-02" => 3})
+    @chartdata = {}
+
+    @year_values.each_with_index do |year, index|
+      @chartdata[year] = @housing_values[index]
+    end
 
     render({ :template => "limitedsarasota/show.html.erb" })
   end
