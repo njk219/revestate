@@ -17,24 +17,27 @@
     var map = new google.maps.Map(mapDiv);
 
     var bounds = new google.maps.LatLngBounds();
-    
-    var infowindow = new google.maps.InfoWindow({
-      content: "Click Content" 
-    });
-    
-    var marker = new google.maps.Marker({
-      position: {lat: 41.8381065, lng: -87.6512738}, 
-      map: map,
-      title: 'Hello World!',
-      icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png' 
-    });
-    
-    marker.addListener('click', function() {
-      infowindow.open(map, marker);
-    });
 
-  bounds.extend(new google.maps.LatLng(41.8381065, -87.6512738 ));
+    <% @gmaps_array.each do |place| %>
 
+      var infowindow_<%= place.fetch("id") %> = new google.maps.InfoWindow({
+      content: "<b><%= place.fetch("address") %></b>"
+      });
+      
+      // Make marker for this place
+      var marker_<%= place.fetch("id") %> = new google.maps.Marker({
+        position: {lat: <%= place.fetch("lat") %>, lng: <%= place.fetch("lng") %>},
+        map: map,
+        title: "<%= place.fetch("address") %>",
+        icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+      });
+    // Click to show info window
+      marker_<%= place.fetch("id") %>.addListener('click', function() {
+        infowindow_<%= place.fetch("id") %>.open(map, marker_<%= place.fetch("id") %>);
+      });
+
+      bounds.extend(new google.maps.LatLng(<%= place.fetch("lat") %>, <%= place.fetch("lng") %>));
+    <%end%>
   map.fitBounds(bounds);
   };
   
