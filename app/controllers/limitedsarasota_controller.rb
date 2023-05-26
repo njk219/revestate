@@ -19,13 +19,14 @@ class LimitedsarasotaController < ApplicationController
   end
 
   def show
+    #require 'fusioncharts-rails'
     the_id = params.fetch("path_id")
 
     matching_limitedsarasota = Limitedsarasotum.where({ :id => the_id })
 
     @the_limitedsarasotum = matching_limitedsarasota.at(0)
 
-
+    @housing_values = eval(@the_limitedsarasotum.values_assessed)
 
     render({ :template => "limitedsarasota/show.html.erb" })
   end

@@ -1,10 +1,12 @@
 <div>
   <div>
     <h1>
-      Limitedsarasotum #<%= @the_limitedsarasotum.address %> details
+      <%= @the_limitedsarasotum.address %> details
     </h1>
     <hr>
-      <%=  eval(@the_limitedsarasotum.values_assessed)%>
+      <%= thevalues = eval(@the_limitedsarasotum.values_assessed)%>
+
+      <%= line_chart ({"2021-01-01" => 2, "2021-01-02" => 3}) %>
     <div>
       <div>
         <a href="/limitedsarasota">
