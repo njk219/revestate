@@ -1,8 +1,9 @@
 class BookmarksController < ApplicationController
   def index
     matching_bookmarks = Bookmark.all
+    better_matching_bookmarks = matching_bookmarks.where({ :user_id => session[:user_id] })
 
-    @list_of_bookmarks = matching_bookmarks.order({ :created_at => :desc })
+    @list_of_bookmarks = better_matching_bookmarks.order({ :created_at => :desc })
 
     render({ :template => "bookmarks/index.html.erb" })
   end
