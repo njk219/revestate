@@ -14,7 +14,38 @@ class LimitedsarasotaController < ApplicationController
     matching_limitedsarasota = Limitedsarasotum.all
 
     @list_of_limitedsarasota = matching_limitedsarasota.order({ :created_at => :desc })
+    @gmaps_array = []
+    i=0
+    @list_of_limitedsarasota.take(20).each do |a_limitedsarasotum|
+      input = a_limitedsarasotum.address
+      gmaps_url = "https://maps.googleapis.com/maps/api/geocode/json?address=#{input}&key=#{ENV.fetch("GMAPS_KEY")}"
 
+      require "open-uri"
+      raw_response = URI.open(gmaps_url).read
+
+      require "json"
+      parse_response = JSON.parse(raw_response)
+
+      results_array = parse_response.fetch("results")
+      first_result = results_array.at(0)
+      geometry = first_result.fetch("geometry")
+      location = geometry.fetch("location")
+      lat = location.fetch("lat")
+      long = location.fetch("lng")
+
+      element = {
+        "id" => i,
+        "lat" => lat,
+        "lng" => long,
+        "address" => input
+      }
+      @gmaps_array << element
+      i=i+1
+    end
+
+    
+
+    #puts @gmaps_array
     render({ :template => "limitedsarasota/index.html.erb" })
   end
 

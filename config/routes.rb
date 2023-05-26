@@ -63,10 +63,10 @@ Rails.application.routes.draw do
   
   # UPDATE
   
-  #post("/modify_limitedsarasotum/:path_id", { :controller => "limitedsarasota", :action => "update" })
+  post("/modify_limitedsarasotum/:path_id", { :controller => "limitedsarasota", :action => "update" })
   
   # DELETE
-  #get("/delete_limitedsarasotum/:path_id", { :controller => "limitedsarasota", :action => "destroy" })
+  get("/delete_limitedsarasotum/:path_id", { :controller => "limitedsarasota", :action => "destroy" })
 
   #------------------------------
 

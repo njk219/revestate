@@ -39,8 +39,8 @@
   };
   
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB92cYxPcYqgjwBJfWlwDQw_7yjuyU3tpA&callback=initMap"
-async defer></script>
+<% gmaps_url = "https://maps.googleapis.com/maps/api/js?key=#{ENV.fetch("GMAPS_KEY")}&callback=initMap"%>
+<script src="<%=gmaps_url%>" async defer></script>
 <hr>
 <div>
   <div>
